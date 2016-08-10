@@ -55,6 +55,14 @@ export default function (videoId, height) {
              webViewBridge.send(JSON.stringify(payload));
            }
 
+           // Assume every message passed in is a player
+           // method name, so just call that method and send the
+           // result back.
+           webViewBridge.onMessage = function(message) {
+             var rVal = player[message]();
+             sendEvent(message, rVal);
+           }
+
          }});
 
        });

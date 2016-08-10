@@ -37,14 +37,6 @@ export default class Wistia extends React.Component {
     this.registerHandlers();
   }
 
-  api(method, cb) {
-    if (!this.state.ready) {
-      throw new Error('You cannot use the `api` method until `onReady` has been called');
-    }
-    this.refs.webviewBridge.sendToBridge(method);
-    this.registerBridgeEventHandler(method, cb);
-  }
-
   registerHandlers() {
     this.registerBridgeEventHandler('ready', this.onReady);
     this.registerBridgeEventHandler('play', this.props.onPlay);
@@ -56,6 +48,7 @@ export default class Wistia extends React.Component {
   }
 
   onBridgeMessage = (message) => {
+
     let payload;
     try {
       payload = JSON.parse(message);
@@ -71,10 +64,19 @@ export default class Wistia extends React.Component {
     if (this.props.onReady) this.props.onReady();
   }
 
+  api = (method, cb) => {
+    if (!this.state.ready) {
+      throw new Error('You cannot use the `api` method until `onReady` has been called');
+    }
+    this.refs.webviewBridge.sendToBridge(method);
+    this.registerBridgeEventHandler(method, cb);
+  }
+
   render() {
     const html = getPlayerHTML(this.props.videoId);
     return (
       <WebViewBridge
+        ref='webviewBridge'
         source={{ html: html, baseUrl: 'https://www.myagi.com/' }}
         style={{
           marginTop: -8,
