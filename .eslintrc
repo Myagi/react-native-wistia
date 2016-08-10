@@ -1,0 +1,50 @@
+{
+  "parser": "babel-eslint",
+  "ecmaFeatures": {
+    "jsx": true
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "globals"   : {
+    "require"   : false,
+    "module"    : false,
+    "window"    : false,
+    "document"  : false,
+    "jest"      : false,
+    "describe"  : false,
+    "it"        : false,
+    "expect"    : false,
+    "beforeEach": false,
+    "afterEach" : false,
+    "before"    : false,
+    "after"     : false,
+    "Promise"   : false,
+    "confirm"   : false,
+    "context"   : false,
+    "mixpanel"  : false
+  },
+  "rules": {
+    "quotes": [1, "single"],
+    "eol-last": [0],
+    "no-mixed-requires": [0],
+    "strict": [1, "never"],
+    "no-unused-vars": [0, {"vars": "local", "args": "after-used"}],
+    "semi": [1, "always"],
+    "no-extra-semi": [1],
+    "curly": [1, "multi-line"],
+    "camelcase": [0, {"properties": "always"}],
+    "comma-dangle": [0],
+    "no-trailing-spaces": [0],
+    "no-underscore-dangle": [0],
+    "no-multi-spaces": [1],
+    "new-cap": [0],
+    "no-unreachable": [1],
+    "no-path-concat": [0],
+    "no-unused-expressions": [0],
+    "no-alert": [0],
+    "no-shadow": [1],
+    "handle-callback-err": [1]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "react-native-wistia",
+  "version": "0.1.0",
+  "description": "A <Wistia/> component for React Native.",
+  "main": "Wistia.ios.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Myagi/react-native-wistia.git"
+  },
+  "keywords": [
+    "alex-mcleod",
+    "Myagi",
+    "react",
+    "react-native"
+  ],
+  "author": "Alex McLeod",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Myagi/react-native-wistia/issues"
+  },
+  "homepage": "https://github.com/Myagi/react-native-wistia#readme",
+  "peerDependencies": {
+    "react-native-webview-bridge": "^0.20.3"
+  }
+}
