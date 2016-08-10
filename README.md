@@ -3,7 +3,7 @@
 It is easy enough to embed Wistia videos in your React Native app using a standard
 React Native Webview, however it is impossible to access the Wistia player API that way.
 This component allows you to easily embed a Wistia video in your app and have full access to
-the Wistia player JS API (documented at https://developer.wistia.com/player/js-api).
+the Wistia player JS API (documented at https://wistia.com/doc/player-api).
 
 ## Installation
 
@@ -22,28 +22,10 @@ the Wistia player JS API (documented at https://developer.wistia.com/player/js-a
     videoId='2619976' // Wistia video ID
     onReady={ () => console.log('Video is ready') }
     onPlay={ () => console.log('Video is playing') }
-    onPlayProgress={ data => console.log('Video progress data:', data) }
-    onFinish={ () => console.log('Video is finished') }
+    onEnd={ () => console.log('Video is finished') }
   />
 ```
 
 `this.refs.video.api('getDuration', dur => console.log('Video duration is:', dur))`
 
 NOTE: Any `api` method calls must be made after `onReady` has been called.
-
-## How it works
-
-Internally, a webview loads a HTML page which is hosted via Github Pages. This HTML page loads your
-Wistia video in an iFrame, then uses the Froogaloop JS library provided by Wistia to pass event
-information through the webview bridge to your application. Wistia API calls are made by sending a
-message to the HTML page via the webview bridge.
-
-Ideally, the HTML page content would just be passed as a string into the webview, however if that
-were the case then the Wistia JS API would not function. As stated in the Wistia JS API
-documentation, the Froogaloop library can only interact with the Wistia iFrame when the page is
-served up by a web server, not when it is loaded locally.
-
-If you would like to view the contents of the HTML page used, simply clone this repo
-and checkout the `gh-pages` branch (more info here
-https://help.github.com/articles/creating-project-pages-manually/). Alternatively, just visit
-http://myagi.github.io/react-native-wistia/ and view the source.
