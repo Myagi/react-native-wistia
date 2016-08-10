@@ -26,6 +26,6 @@ the Wistia player JS API (documented at https://wistia.com/doc/player-api).
   />
 ```
 
-`this.refs.video.api('getDuration', dur => console.log('Video duration is:', dur))`
+`this.refs.video.api('duration', dur => console.log('Video duration is:', dur))`
 
 NOTE: Any `api` method calls must be made after `onReady` has been called.
