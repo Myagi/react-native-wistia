@@ -18,7 +18,10 @@ export default class Wistia extends React.Component {
     videoId: PropTypes.string.isRequired,
     onReady: PropTypes.func,
     onPlay: PropTypes.func,
-    onEnd: PropTypes.func
+    onEnd: PropTypes.func,
+    // `baseUrl` determines where the webview says
+    // the video is playing from.
+    baseUrl: PropType.string
   }
 
   constructor() {
@@ -77,7 +80,7 @@ export default class Wistia extends React.Component {
     return (
       <WebViewBridge
         ref='webviewBridge'
-        source={{ html: html, baseUrl: 'https://www.myagi.com/' }}
+        source={{ html: html, baseUrl: this.props.baseUrl }}
         style={{
           marginTop: -8,
           marginLeft: -10,
