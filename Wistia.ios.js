@@ -21,7 +21,7 @@ export default class Wistia extends React.Component {
     onEnd: PropTypes.func,
     // `baseUrl` determines where the webview says
     // the video is playing from.
-    baseUrl: PropType.string
+    baseUrl: PropTypes.string
   }
 
   constructor() {
