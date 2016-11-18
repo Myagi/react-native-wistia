@@ -63,7 +63,10 @@ export default class Wistia extends React.Component {
 
   onReady = () => {
     this.setState({ready: true});
-    if (this.props.onReady) this.props.onReady();
+    // Defer calling `this.props.onReady`. This ensures 
+    // that `this.state.ready` will be updated to
+    // `true` by the time it is called.
+    if (this.props.onReady) setTimeout(this.props.onReady);
   }
 
   api = (method, cb) => {
