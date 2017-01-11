@@ -1,0 +1,115 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/Alex/.nvm/versions/node/v5.10.1/bin/node',
+1 verbose cli   '/Users/Alex/.nvm/versions/node/v5.10.1/bin/npm',
+1 verbose cli   'publish',
+1 verbose cli   '.' ]
+2 info using npm@3.8.3
+3 info using node@v5.10.1
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/Alex/Documents/SoftwareDevelopment/projects/myagi/react-native-wistia',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/Alex/.npm/react-native-wistia/0.1.0/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/Alex/.npm correctMkdir not in flight; initializing
+10 info lifecycle react-native-wistia@0.1.0~prepublish: react-native-wistia@0.1.0
+11 silly lifecycle react-native-wistia@0.1.0~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/Users/Alex/.npm/react-native-wistia/0.1.0/package.tgz',
+12 verbose tar pack   '/Users/Alex/Documents/SoftwareDevelopment/projects/myagi/react-native-wistia' ]
+13 verbose tarball /Users/Alex/.npm/react-native-wistia/0.1.0/package.tgz
+14 verbose folder /Users/Alex/Documents/SoftwareDevelopment/projects/myagi/react-native-wistia
+15 verbose addLocalTarball adding from inside cache /Users/Alex/.npm/react-native-wistia/0.1.0/package.tgz
+16 verbose correctMkdir /Users/Alex/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd react-native-wistia@0.1.0
+18 verbose afterAdd /Users/Alex/.npm/react-native-wistia/0.1.0/package/package.json not in flight; writing
+19 verbose correctMkdir /Users/Alex/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /Users/Alex/.npm/react-native-wistia/0.1.0/package/package.json written
+21 silly publish { name: 'react-native-wistia',
+21 silly publish   version: '0.1.0',
+21 silly publish   description: 'A <Wistia/> component for React Native.',
+21 silly publish   main: 'Wistia.ios.js',
+21 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+21 silly publish   repository:
+21 silly publish    { type: 'git',
+21 silly publish      url: 'git+https://github.com/Myagi/react-native-wistia.git' },
+21 silly publish   keywords: [ 'alex-mcleod', 'Myagi', 'react', 'react-native' ],
+21 silly publish   author: { name: 'Alex McLeod' },
+21 silly publish   license: 'MIT',
+21 silly publish   bugs: { url: 'https://github.com/Myagi/react-native-wistia/issues' },
+21 silly publish   homepage: 'https://github.com/Myagi/react-native-wistia#readme',
+21 silly publish   peerDependencies: { 'react-native-webview-bridge': '^0.20.3' },
+21 silly publish   devDependencies:
+21 silly publish    { 'babel-eslint': '6.0.0',
+21 silly publish      eslint: '2.5.3',
+21 silly publish      'eslint-config-airbnb': '6.2.0',
+21 silly publish      'eslint-plugin-import': '1.4.0',
+21 silly publish      'eslint-plugin-react': '4.3.0' },
+21 silly publish   readme: '# React Native Wistia Player\n\nIt is easy enough to embed Wistia videos in your React Native app using a standard\nReact Native Webview, however it is impossible to access the Wistia player API that way.\nThis component allows you to easily embed a Wistia video in your app and have full access to\nthe Wistia player JS API (documented at https://wistia.com/doc/player-api).\n\n## Installation\n\n1. Go through the instructions for installing the\n`React Native Webview Bridge` component, found here: https://github.com/alinz/react-native-webview-bridge.\n\n2. Run `npm install react-native-wistia` within your project.\n\n3. Compile and build to make sure everything is set up properly.\n\n## Usage\n\n```\n  <Wistia\n    ref=\'video\'\n    videoId=\'2619976\' // Wistia video ID\n    onReady={ () => console.log(\'Video is ready\') }\n    onPlay={ () => console.log(\'Video is playing\') }\n    onEnd={ () => console.log(\'Video is finished\') }\n  />\n```\n\n`this.refs.video.api(\'duration\', dur => console.log(\'Video duration is:\', dur))`\n\nNOTE: Any `api` method calls must be made after `onReady` has been called.\n',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   gitHead: '7d5439bfffb221f51b6dae23ca609791cccbd10e',
+21 silly publish   _id: 'react-native-wistia@0.1.0',
+21 silly publish   _shasum: 'cbc5ca82cc31749f94db90a4cdd9410b21f470dd',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name react-native-wistia
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'react-native-wistia',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   name: 'react-native-wistia',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.npmjs.org/react-native-wistia
+28 verbose publish registryBase https://registry.npmjs.org/
+29 silly publish uploading /Users/Alex/.npm/react-native-wistia/0.1.0/package.tgz
+30 verbose request uri https://registry.npmjs.org/react-native-wistia
+31 verbose request sending authorization for write operation
+32 info attempt registry request try #1 at 4:23:11 PM
+33 verbose request using bearer token for auth
+34 verbose request id 4e35df2cc561e3d9
+35 http request PUT https://registry.npmjs.org/react-native-wistia
+36 http 403 https://registry.npmjs.org/react-native-wistia
+37 verbose headers { 'content-type': 'application/json',
+37 verbose headers   'cache-control': 'max-age=300',
+37 verbose headers   'content-length': '95',
+37 verbose headers   'accept-ranges': 'bytes',
+37 verbose headers   date: 'Tue, 30 Aug 2016 23:23:11 GMT',
+37 verbose headers   via: '1.1 varnish',
+37 verbose headers   connection: 'keep-alive',
+37 verbose headers   'x-served-by': 'cache-sjc3624-SJC',
+37 verbose headers   'x-cache': 'MISS',
+37 verbose headers   'x-cache-hits': '0',
+37 verbose headers   'x-timer': 'S1472599391.125310,VS0,VE129',
+37 verbose headers   vary: 'Accept-Encoding' }
+38 verbose request invalidating /Users/Alex/.npm/registry.npmjs.org/react-native-wistia on PUT
+39 error publish Failed PUT 403
+40 verbose stack Error: "You cannot publish over the previously published version 0.1.0." : react-native-wistia
+40 verbose stack     at makeError (/Users/Alex/.nvm/versions/node/v5.10.1/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+40 verbose stack     at CachingRegistryClient.<anonymous> (/Users/Alex/.nvm/versions/node/v5.10.1/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+40 verbose stack     at Request._callback (/Users/Alex/.nvm/versions/node/v5.10.1/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+40 verbose stack     at Request.self.callback (/Users/Alex/.nvm/versions/node/v5.10.1/lib/node_modules/npm/node_modules/request/request.js:199:22)
+40 verbose stack     at emitTwo (events.js:100:13)
+40 verbose stack     at Request.emit (events.js:185:7)
+40 verbose stack     at Request.<anonymous> (/Users/Alex/.nvm/versions/node/v5.10.1/lib/node_modules/npm/node_modules/request/request.js:1036:10)
+40 verbose stack     at emitOne (events.js:95:20)
+40 verbose stack     at Request.emit (events.js:182:7)
+40 verbose stack     at IncomingMessage.<anonymous> (/Users/Alex/.nvm/versions/node/v5.10.1/lib/node_modules/npm/node_modules/request/request.js:963:12)
+41 verbose statusCode 403
+42 verbose pkgid react-native-wistia
+43 verbose cwd /Users/Alex/Documents/SoftwareDevelopment/projects/myagi/react-native-wistia
+44 error Darwin 15.6.0
+45 error argv "/Users/Alex/.nvm/versions/node/v5.10.1/bin/node" "/Users/Alex/.nvm/versions/node/v5.10.1/bin/npm" "publish" "."
+46 error node v5.10.1
+47 error npm  v3.8.3
+48 error code E403
+49 error "You cannot publish over the previously published version 0.1.0." : react-native-wistia
+50 error If you need help, you may report this error at:
+50 error     <https://github.com/npm/npm/issues>
+51 verbose exit [ 1, true ]
