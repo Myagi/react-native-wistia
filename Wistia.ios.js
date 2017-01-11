@@ -2,11 +2,10 @@
  * @providesModule Wistia
  * @flow
  */
-import React from 'react-native';
-const {
-  StyleSheet,
-  PropTypes
-} = React;
+import React from 'react';
+import {
+  StyleSheet
+} from 'react-native';
 import WebViewBridge from 'react-native-webview-bridge';
 
 import getPlayerHTML from './player-html';
@@ -15,13 +14,13 @@ import getPlayerHTML from './player-html';
 export default class Wistia extends React.Component {
 
   static propTypes = {
-    videoId: PropTypes.string.isRequired,
-    onReady: PropTypes.func,
-    onPlay: PropTypes.func,
-    onEnd: PropTypes.func,
+    videoId: React.PropTypes.string.isRequired,
+    onReady: React.PropTypes.func,
+    onPlay: React.PropTypes.func,
+    onEnd: React.PropTypes.func,
     // `baseUrl` determines where the webview says
     // the video is playing from.
-    baseUrl: PropType.string
+    baseUrl: React.PropTypes.string
   }
 
   constructor() {
@@ -64,7 +63,10 @@ export default class Wistia extends React.Component {
 
   onReady = () => {
     this.setState({ready: true});
-    if (this.props.onReady) this.props.onReady();
+    // Defer calling `this.props.onReady`. This ensures 
+    // that `this.state.ready` will be updated to
+    // `true` by the time it is called.
+    if (this.props.onReady) setTimeout(this.props.onReady);
   }
 
   api = (method, cb) => {
