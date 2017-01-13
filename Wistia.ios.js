@@ -20,7 +20,8 @@ export default class Wistia extends React.Component {
     onEnd: React.PropTypes.func,
     // `baseUrl` determines where the webview says
     // the video is playing from.
-    baseUrl: React.PropTypes.string
+    baseUrl: React.PropTypes.string,
+    scalesPageToFit: React.PropTypes.bool
   }
 
   constructor() {
@@ -63,7 +64,7 @@ export default class Wistia extends React.Component {
 
   onReady = () => {
     this.setState({ready: true});
-    // Defer calling `this.props.onReady`. This ensures 
+    // Defer calling `this.props.onReady`. This ensures
     // that `this.state.ready` will be updated to
     // `true` by the time it is called.
     if (this.props.onReady) setTimeout(this.props.onReady);
@@ -88,7 +89,7 @@ export default class Wistia extends React.Component {
           marginLeft: -10,
           height: this.props.height
         }}
-        scalesPageToFit={false}
+        scalesPageToFit={this.props.scalesPageToFit}
         scrollEnabled={false}
         onBridgeMessage={this.onBridgeMessage}
         onError={(error)=> console.error(error)}
